@@ -1,5 +1,5 @@
 import PageTitle from "../components/PageTitle";
-import enigmaGrowLogo from "../assets/enigma_grow.png";
+import enigmaGrowLogo from "../assets/images/enigma_grow.png";
 import { useState } from "react";
 
 function LoginPage() {
