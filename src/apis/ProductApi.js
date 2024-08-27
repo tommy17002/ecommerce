@@ -29,7 +29,7 @@ class ProductsApi {
         }
         finally
         {
-            store,dispatch(setLoading(false));
+            store.dispatch(setLoading(false));
         }
     }
     
