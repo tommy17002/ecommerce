@@ -1,3 +1,4 @@
+// FE
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { NextUIProvider } from "@nextui-org/react";
