@@ -17,6 +17,18 @@ export const productSlice = createSlice(
                 state.items = action.payload.items;
                 state.total = action.payload.total;
             },
+            addProduct: (state, action) => 
+            {
+                    state.items = [...state.items, action.payload];
+                    state.total += 1;
+            },
+            editProduct: (state, action) => 
+            {
+                    const{id, item} = action.payload;
+                    state.items = state.items.map((productItem) =>
+                        productItem === id ? item : productItem
+                    );
+            },
             setLoading: (state, action) =>
             {
                 state.isLoading=action.payload;

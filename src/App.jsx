@@ -5,11 +5,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import LoginPage from "./pages/LoginPage";
 import ProtectedRoute from "./components/ProtectedRoute";
-import SimpleDashboardPage from "./pages/SimpleDashboardPage";
-import DashboardPage from "./pages/DashboardPage";
 import { CounterPage } from "./pages/CounterPage";
+import DashboardPage from "./pages/DashboardPage";
+import LoginPage from "./pages/LoginPage";
 import ProductsPage from "./pages/ProductsPage";
 
 const HomePage = () => <h1>Home Page</h1>;
@@ -44,6 +43,10 @@ const router = createBrowserRouter([
           {
             path: "products",
             element: <ProductsPage />,
+          },
+          {
+            path: "products",
+            element: <ProductDetailPage />,
           },
           {
             path: "transactions",

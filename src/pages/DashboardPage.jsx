@@ -11,6 +11,11 @@ import {
 } from "@heroicons/react/24/outline";
 
 import enigmaGrowLogo from "../assets/enigma_grow.png";
+import { className } from "../utils/styles.util";
+
+/**
+ * 
+ */
 
 const navigationList = [
   { name: "Home", href: "/dashboard", icon: HomeIcon },
@@ -78,11 +83,14 @@ function DashboardPage() {
                   <NavLink
                     key={items.name}
                     to={items.href}
+                    end={items.href === "/dashboard"}
                     className={({isActive}) => {
-                      const dynamic = isActive
+                      const dynamicClassName = isActive
                       ? "bg-primary-darker text-white "
                       : " text-text-gray hover:bg-primary-dark hover:text-text-white "
-                      return (
+                      
+                      return className(
+                        dynamicClassName,
                         " group flex items-center px-2 text-sm font-medium rounded-md " + dynamic
                       );
                     }}
